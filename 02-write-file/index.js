@@ -10,14 +10,16 @@ const rl = readline.createInterface({
 });
 
 fs.writeFile(filePath, 'Your Text: ', (error) => {
-  error
-    ? console.log(error)
-    : (console.log(
+  error ? 
+    console.log(error) : 
+    (
+      console.log(
         '\x1b[36m',
         'Holla:) File text.txt created, and You may enter your text below',
         '\x1b[0m'
       ),
-      rl.prompt());
+      rl.prompt()
+    );
 });
 
 rl.on('line', (line) => {
