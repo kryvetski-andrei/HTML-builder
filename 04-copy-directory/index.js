@@ -11,7 +11,7 @@ fs.readdir(folderPath, (error, data) => {
       fs.readFile(path.join(folderPath, file),  (error, data) => {
         error ?
           console.log(error) :
-          fs.writeFileSync(path.join(__dirname, 'files-copy', file), `${data}`, (error) => {
+          fs.writeFile(path.join(__dirname, 'files-copy', file), `${data}`, (error) => {
             error ? console.log(error) : null;
           });
       })
