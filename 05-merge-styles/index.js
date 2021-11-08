@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-fs.writeFile(path.join(__dirname, 'project-dist', 'bundle.css'), '', (error) => null)
+
+fs.writeFile(path.join(__dirname, 'project-dist', 'bundle.css'), '', (error) => null);
 fs.readdir(path.join(__dirname, 'styles'), { withFileTypes: true }, (error, data) => {
   error ?
     console.log(error) :
