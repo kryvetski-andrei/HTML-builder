@@ -12,6 +12,6 @@ fs.readdir(folderPath, { withFileTypes: true }, (error, data) => {
             console.log(error) : 
             console.log(`${file.name.split('.')[0]} - ${path.extname(file.name)} - ${stats.size}`);
         });
-      }
+      };
     });
 });
