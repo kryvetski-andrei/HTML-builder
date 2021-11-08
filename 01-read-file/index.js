@@ -6,3 +6,4 @@ const readStream = fs.createReadStream(filePath);
 readStream.on('data', (chunk) => {
   console.log(chunk.toString())
 })
+
